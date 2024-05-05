@@ -10,28 +10,30 @@ import jakarta.persistence.ManyToOne;
 public class Media {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String description;
     private String fileUrl;
-    @ManyToOne
-    private User user;
+    //@ManyToOne
+    //private User user;
 
     // Constructors
     public Media() {
     }
 
-    public Media(String description, String fileUrl, User user) {
+    public Media(String description, String fileUrl
+    //, User user
+    ) {
         this.description = description;
         this.fileUrl = fileUrl;
-        this.user = user;
+        //this.user = user;
     }
 
     // Getters and setters
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -51,11 +53,11 @@ public class Media {
         this.fileUrl = fileUrl;
     }
 
-    public User getUser() {
+    /* public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }
+    } */
 }
