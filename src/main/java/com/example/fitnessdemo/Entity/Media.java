@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+
 @Entity
 public class Media {
     @Id
@@ -13,20 +14,8 @@ public class Media {
     private int id;
     private String description;
     private String fileUrl;
-    //@ManyToOne
-    //private User user;
-
-    // Constructors
-    public Media() {
-    }
-
-    public Media(String description, String fileUrl
-    //, User user
-    ) {
-        this.description = description;
-        this.fileUrl = fileUrl;
-        //this.user = user;
-    }
+    @ManyToOne
+    private User user;
 
     // Getters and setters
     public int getId() {
@@ -53,11 +42,11 @@ public class Media {
         this.fileUrl = fileUrl;
     }
 
-    /* public User getUser() {
+    public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    } */
+    } 
 }
