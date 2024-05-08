@@ -1,0 +1,17 @@
+.meal-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .meal-preview img {
+    width: 100px; /* Adjust size as necessary */
+    height: 100px; /* Adjust size as necessary */
+    border-radius: 50%;
+  }
+  
+  .meal-preview div {
+    flex-grow: 1;
+  }
+  
