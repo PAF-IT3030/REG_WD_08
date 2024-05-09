@@ -7,7 +7,8 @@ function PostForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you will handle the API call to submit the form data
+  
+    
     console.log(title, description, fileUrl);
   };
 
