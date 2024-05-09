@@ -8,10 +8,11 @@ import jakarta.persistence.ManyToOne;
 
 
 @Entity
-public class Media {
+public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String title;
     private String description;
     private String fileUrl;
     @ManyToOne
@@ -26,6 +27,14 @@ public class Media {
         this.id = id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
     public String getDescription() {
         return description;
     }
